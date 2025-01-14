@@ -40,3 +40,7 @@ POST /api/products: Crea un nuevo producto.
 PUT /api/products/{id}: Actualiza un producto existente.
 
 ## Configuración Local
+1. Clonar el repositorio:
+```bash
+git clone https://github.com/wilmarbg/prueba-api.git
+
