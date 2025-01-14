@@ -41,6 +41,16 @@ PUT /api/products/{id}: Actualiza un producto existente.
 
 ## Configuración Local
 1. Clonar el repositorio:
-```bash
+
 git clone https://github.com/wilmarbg/prueba-api.git
 
+2. Navegar hasta el directorio del proyecto:
+
+cd prueba-api
+
+3. Restaurar dependencias:
+
+dotnet restore
+
+4. Configuración del almacenamiento JSON:
+El archivo de almacenamiento JSON se creará automáticamente al momento de enviar a crear un producto
