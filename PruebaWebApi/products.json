@@ -1,0 +1,10 @@
+[
+  {
+    "ProductId": 1,
+    "Name": "Mandarina 1",
+    "Status": 1,
+    "Stock": 11,
+    "Description": "Mandarina China",
+    "Price": 7
+  }
+]
