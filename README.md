@@ -35,9 +35,9 @@ El proyecto está dividido en los siguientes módulos y carpetas:
 	- Contiene pruebas unitarias para validar el comportamiento de las funciones implementadas.
 
 ## Endpoints
-GET /api/products/{id}: Obtiene un producto por ID.
-POST /api/products: Crea un nuevo producto.
-PUT /api/products/{id}: Actualiza un producto existente.
+- **GET /api/products/{id}:** Obtiene un producto por ID.
+- **POST /api/products:** Crea un nuevo producto.
+- **PUT /api/products/{id}:** Actualiza un producto existente.
 
 ## Configuración Local
 1. Clonar el repositorio:
