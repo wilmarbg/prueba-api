@@ -75,17 +75,10 @@ namespace BusinessLogic.Product.Service
             return await _repository.UpdateAsync(product);
         }
 
-        //private async Task<decimal> GetDiscountFromExternalService(int productId)
-        //{
-        //    // Lógica para obtener descuento usando un servicio externo.
-        //    return 10; // Descuento de ejemplo.
-        //}
-
         private async Task<decimal> GetDiscountFromExternalService(int productId)
         {
             try
             {
-                //var apiUrl = $"https://mockapi.io/api/v1/products/{productId}/discount";
                 var apiUrl = $"https://6785f601f80b78923aa4e05a.mockapi.io/api/v1/products/discount/{productId}";
                 var response = await _httpClient.GetAsync(apiUrl);
 

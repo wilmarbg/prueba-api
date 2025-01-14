@@ -17,6 +17,7 @@ builder.Services.AddSwaggerGen(options =>
         Title = "API PRUEBA",
         Version = "v1"
     });
+    options.EnableAnnotations();
 });
 
 
@@ -27,16 +28,6 @@ builder.Services.AddScoped<IProductService, ProductService>();
 
 builder.Services.AddHttpClient<IProductService, ProductService>();
 
-//configuracion de Cors
-//builder.Services.AddCors(cors => cors.AddPolicy("corsapp", builder =>
-//{
-//    builder.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();
-//}));
-
-//builder.Services.AddCors(cors => cors.AddPolicy("corsapp", builder =>
-//{
-//    builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
-//}));
 
 builder.Services.AddCors(options =>
 {
@@ -53,7 +44,6 @@ var app = builder.Build();
 // Middleware
 app.UseMiddleware<LoggingMiddleware>();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -63,7 +53,6 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-//app.UseCors("corsapp");
 app.UseCors("AllowAll");
 
 app.UseAuthorization();

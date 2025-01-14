@@ -14,5 +14,13 @@
     "Stock": 1,
     "Description": "Ingreso de Producto",
     "Price": 100
+  },
+  {
+    "ProductId": 3,
+    "Name": "Producto 3 modificado",
+    "Status": 1,
+    "Stock": 100,
+    "Description": "Detalle producto 3 modificado",
+    "Price": 70
   }
 ]
