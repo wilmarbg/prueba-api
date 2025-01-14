@@ -6,5 +6,13 @@
     "Stock": 11,
     "Description": "Mandarina China",
     "Price": 7
+  },
+  {
+    "ProductId": 2,
+    "Name": "Producto 2",
+    "Status": 0,
+    "Stock": 1,
+    "Description": "Ingreso de Producto",
+    "Price": 100
   }
 ]

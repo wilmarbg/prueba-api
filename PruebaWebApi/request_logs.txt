@@ -47,3 +47,8 @@
 14/01/2025 12:33:57: GET /api/Products/1 executed in 4094 ms
 14/01/2025 13:01:37: GET /swagger/index.html executed in 111 ms
 14/01/2025 13:01:38: GET /swagger/v1/swagger.json executed in 20 ms
+14/01/2025 14:22:53: GET /swagger/index.html executed in 103 ms
+14/01/2025 14:22:53: GET /swagger/v1/swagger.json executed in 20 ms
+14/01/2025 14:23:00: GET /api/Products/1 executed in 634 ms
+14/01/2025 14:23:33: POST /api/Products executed in 135 ms
+14/01/2025 14:23:43: GET /api/Products/2 executed in 83 ms
