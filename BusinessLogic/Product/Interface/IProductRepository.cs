@@ -9,6 +9,7 @@ namespace BusinessLogic.Product.Interface
 {
     public interface IProductRepository
     {
+        Task<List<ProductCore>> GetAllAsync();
         Task<ProductCore> GetByIdAsync(int id);
         Task<ProductCore> AddAsync(ProductCore product);
         Task<bool> UpdateAsync(ProductCore product);

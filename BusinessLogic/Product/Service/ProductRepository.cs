@@ -18,6 +18,11 @@ namespace BusinessLogic.Product.Service
             _products = FileHelper.LoadProducts();
         }
 
+        public Task<List<ProductCore>> GetAllAsync()
+        {
+            return Task.FromResult(_products.ToList());
+        }
+
         public Task<ProductCore> GetByIdAsync(int id)
         {
             return Task.FromResult(_products.FirstOrDefault(p => p.ProductId == id));

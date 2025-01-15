@@ -18,6 +18,21 @@ namespace PruebaWebApi.Controllers
         }
 
         /// <summary>
+        /// Obtiene todos los productos.
+        /// </summary>
+        /// <returns>Una lista con todos los productos.</returns>
+        [HttpGet]
+        [SwaggerOperation(Summary = "Obtiene todos los productos", Description = "Devuelve una lista con todos los productos disponibles.")]
+        public async Task<ActionResult<List<ProductResponseDto>>> GetAll()
+        {
+            var products = await _productService.GetAllAsync();
+            if (products == null || !products.Any())
+                return NoContent();
+
+            return Ok(products);
+        }
+
+        /// <summary>
         /// Obtiene un producto por su código.
         /// </summary>
         /// <param name="id">El código único del producto.</param>

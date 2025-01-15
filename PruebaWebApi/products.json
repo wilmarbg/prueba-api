@@ -22,5 +22,13 @@
     "Stock": 100,
     "Description": "Detalle producto 3 modificado",
     "Price": 70
+  },
+  {
+    "ProductId": 4,
+    "Name": "Producto Actualizado",
+    "Status": 1,
+    "Stock": 200,
+    "Description": "Descripci\u00F3n",
+    "Price": 100
   }
 ]

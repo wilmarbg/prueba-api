@@ -24,6 +24,35 @@ namespace BusinessLogic.Product.Service
             _httpClient = httpClient;
         }
 
+        public async Task<List<ProductResponseDto>> GetAllAsync()
+        {
+            var products = await _repository.GetAllAsync();
+            if (products == null || !products.Any()) return new List<ProductResponseDto>();
+
+            var productResponseList = new List<ProductResponseDto>();
+
+            foreach (var product in products)
+            {
+                var statusName = _cache.GetStatusName(product.Status);
+                var discount = await GetDiscountFromExternalService(product.ProductId);
+                var finalPrice = product.Price * (100 - discount) / 100;
+
+                productResponseList.Add(new ProductResponseDto
+                {
+                    ProductId = product.ProductId,
+                    Name = product.Name,
+                    StatusName = statusName,
+                    Stock = product.Stock,
+                    Description = product.Description,
+                    Price = product.Price,
+                    Discount = discount,
+                    FinalPrice = finalPrice
+                });
+            }
+
+            return productResponseList;
+        }
+
         public async Task<ProductResponseDto> GetByIdAsync(int id)
         {
             var product = await _repository.GetByIdAsync(id);
